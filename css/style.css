@@ -279,6 +279,22 @@ button:hover {
   margin-top: 1.5rem;
 }
 
+#delete-song-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#delete-song-btn:hover {
+  background: #c0392b;
+}
+
 @media (max-width: 600px) {
     .audio-controls {
         flex-direction: column;

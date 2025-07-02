@@ -387,4 +387,28 @@ document.addEventListener('DOMContentLoaded', function() {
       // Add song logic here
     });
   }
+
+  const deleteSongBtn = document.getElementById('delete-song-btn');
+  if (deleteSongBtn) {
+    deleteSongBtn.addEventListener('click', () => {
+      // Remove the current song from the songs array
+      if (songs.length > 0) {
+        songs.splice(currentSongIndex, 1);
+        // If there are still songs left, play the next one
+        if (songs.length > 0) {
+          currentSongIndex = currentSongIndex % songs.length;
+          loadSong(currentSongIndex);
+          audio.pause();
+        } else {
+          // If no songs left, clear the player
+          audio.pause();
+          document.getElementById('song-title').textContent = 'Title';
+          document.getElementById('song-artist').textContent = 'Artist';
+          document.getElementById('song-album').textContent = 'Album';
+          audio.src = '';
+        }
+        // Optionally update the playlist UI here
+      }
+    });
+  }
 });
