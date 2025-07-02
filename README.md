@@ -26,9 +26,6 @@ index.html
 README.md
 ```
 
-## Demo
-If you have a live demo, add the link here.
-
 ## Credits
 Developed for the Unified Mentor web development assignment.
 
