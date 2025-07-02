@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="music-player">
+        <h1>Music Player</h1>
+        <div class="music-player-card">
+            <div class="song-info">
+                <h2 id="song-title">Title</h2>
+                <p id="song-artist">Artist</p>
+                <p id="song-album">Album</p>
+            </div>
+            <div class="controls-row">
+                <button id="prev-btn">⏮️</button>
+                <button id="play-btn">▶️</button>
+                <button id="pause-btn">⏸️</button>
+                <button id="next-btn">⏭️</button>
+                <button id="shuffle-btn">🔀</button>
+                <button id="repeat-btn">🔁</button>
+            </div>
+            <div class="sliders-row">
+                <label>Volume <input type="range" id="volume-control"></label>
+                <label>Progress <input type="range" id="progress-bar"></label>
+                <label>Speed <select id="speed-control">
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                </select></label>
+            </div>
+            <div class="extras-row">
+                <button id="theme-btn">Switch to Light Theme</button>
+                <button id="show-favorites-btn">Show Favorites</button>
+                <button id="download-btn">Download Current Song</button>
+                <button id="mini-player-btn">Mini Player</button>
+                <button id="share-btn">Share Song</button>
+                <button id="notify-btn">Enable Notifications</button>
+            </div>
+            <div class="playlist-section">
+                <ul id="playlist"></ul>
+            </div>
+            <div class="add-song-form">
+                <input type="text" id="new-title" placeholder="Title">
+                <input type="text" id="new-artist" placeholder="Artist">
+                <input type="text" id="new-album" placeholder="Album">
+                <input type="file" id="new-file" accept="audio/*">
+                <button id="add-song-btn">Add Song</button>
+            </div>
+            <div class="lyrics-section">
+                <h3>Lyrics</h3>
+                <pre id="lyrics-box">No lyrics available.</pre>
+            </div>
+            <audio id="audio"></audio>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
